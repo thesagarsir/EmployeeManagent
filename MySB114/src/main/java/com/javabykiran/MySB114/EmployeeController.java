@@ -29,6 +29,7 @@ public class EmployeeController {
 		String sql = "select * from studentrecord";
 
 		ArrayList<StudentRecord> al =  new ArrayList<>();
+		System.out.println(77777777);
 		StudentRecord ss =null;
 		ResultSet rs = state.executeQuery(sql);
 		while (rs.next()) {
