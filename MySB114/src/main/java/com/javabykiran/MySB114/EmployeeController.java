@@ -27,15 +27,15 @@ public class EmployeeController {
 
 		Statement state = con.createStatement();
 		String sql = "select * from studentrecord";
-
-		ArrayList<StudentRecord> al =  new ArrayList<>();
-		StudentRecord ss =null;
+		System.out.println(sql);
+		ArrayList<StudentRecord> al = new ArrayList<>();
+		StudentRecord ss = null;
 		ResultSet rs = state.executeQuery(sql);
 		while (rs.next()) {
 			int id = rs.getInt(1);
 			String name = rs.getString(2);
 			String marks = rs.getString(3);
-			
+
 			ss = new StudentRecord(id, name, marks);
 			al.add(ss);
 		}
